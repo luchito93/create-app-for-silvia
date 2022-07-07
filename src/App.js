@@ -1,4 +1,5 @@
 import { Gallery } from "./components/gallery/gallery";
+import {Uno}  from "./ejercicios/uno";
 
 
 function App() {
@@ -22,6 +23,11 @@ function App() {
           </a>
         </header>
         <Gallery />
+       <div>
+        <Uno/>
+       </div>
+     
+     
       </div>
     </div>
   );
