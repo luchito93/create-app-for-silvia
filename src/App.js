@@ -1,11 +1,11 @@
 import { Gallery } from "./components/gallery/gallery";
-import {Uno}  from "./ejercicios/uno";
+import Uno from "./ejercicios/uno";
 
 
 function App() {
   return (
-    <div className="bg-violet-800 ">
-      <div className="bg-violet-800 h-screen container mx-auto px-3">
+    <div className="bg-rose-200 ">
+      <div className=" h-screen container mx-auto px-3">
         <header className="App-header">
           <h1 className="text-3xl font-bold underline">
             Hello world!
