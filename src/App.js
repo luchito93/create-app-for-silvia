@@ -1,5 +1,6 @@
 import { Gallery } from "./components/gallery/gallery";
 import Uno from "./ejercicios/uno";
+import List from "./toolist/list";
 
 
 function App() {
@@ -21,12 +22,12 @@ function App() {
           >
             Learn React
           </a>
-        </header>
-        <Gallery />
-       <div>
-        <Uno/>
+        </header><div class="container mx-auto bg-center">
+  <Gallery /> <List/>  
        </div>
-     
+       <div>
+        <Uno/> 
+       </div>
      
       </div>
     </div>
