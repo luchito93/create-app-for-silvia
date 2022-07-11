@@ -2,6 +2,7 @@ import { Gallery } from "./components/gallery/gallery";
 import Uno from "./ejercicios/uno";
 import List from "./toolist/list";
 import Registros from "./registro/registros";
+import Renderizado from"./renderizado/renderizado";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
         <Uno/> 
        </div>
         <div class="p-6 max-w-sm mx-center bg-pink-600 rounded-xl">
-      <Registros/>
+      <Renderizado/>
       </div>
       </div>
     </div>
