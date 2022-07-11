@@ -1,6 +1,7 @@
 import { Gallery } from "./components/gallery/gallery";
 import Uno from "./ejercicios/uno";
 import List from "./toolist/list";
+import Registros from "./registro/registros";
 
 
 function App() {
@@ -23,12 +24,14 @@ function App() {
             Learn React
           </a>
         </header><div class="container mx-auto bg-center">
-  <Gallery /> <List/>  
+        {/*<Gallery /> <List/>*/} 
        </div>
        <div>
         <Uno/> 
        </div>
-     
+        <div class="p-6 max-w-sm mx-center bg-pink-600 rounded-xl">
+      <Registros/>
+      </div>
       </div>
     </div>
   );
