@@ -1,8 +1,8 @@
-import { persona } from './datos.js';
-import { getImageUrl } from './imagen.js';
+import { people } from './datos';
+import { getImageUrl } from './imagen';
 
 export default function List() {
-  const listItems = persona.map(person =>
+  const listItems = people.map(person =>
     <li key={person.id}>
       <img
         src={getImageUrl(person)}
@@ -11,7 +11,7 @@ export default function List() {
       <p>
         <b>{person.name}:</b>
         {' ' + person.profession + ' '}
-       
+        known for {person.accomplishment}
       </p>
     </li>
   );

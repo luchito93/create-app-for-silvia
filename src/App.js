@@ -28,7 +28,7 @@ function App() {
         {/*<Gallery /> <List/>*/} 
        </div>
        <div>
-        <Uno/> 
+      {/* <Uno/> */}  
        </div>
         <div class="p-6 max-w-sm mx-center bg-pink-600 rounded-xl">
       <Renderizado/>
