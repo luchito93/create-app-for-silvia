@@ -4,6 +4,7 @@ import List from "./toolist/list";
 import Registros from "./registro/registros";
 import Renderizado from"./renderizado/renderizado";
 import Cup from "./cup/cup";
+import Compoenteraiz from"./ejemplo1raiz/compoenteraiz";
 
 
 function App() {
@@ -32,8 +33,10 @@ function App() {
       {/* <Uno/> */}  
        </div>
         <div class="p-6 max-w-sm mx-center bg-pink-600 rounded-xl">
-   {/*   <Renderizado/>*/ }
-      <Cup/>
+    <Renderizado/>
+    < Cup/>
+    <Compoenteraiz/>
+   
       </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-export const people = [{
+export  const people = [{
     id: 0,
     name: 'Creola Katherine Johnson',
     profession: 'mathematician',
