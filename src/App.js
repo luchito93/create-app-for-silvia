@@ -5,7 +5,7 @@ import Registros from "./registro/registros";
 import Renderizado from"./renderizado/renderizado";
 import Cup from "./cup/cup";
 import Compoenteraiz from"./ejemplo1raiz/compoenteraiz";
-
+import Llaves from "./Usodellaves/Llaves";
 
 function App() {
   return (
@@ -33,10 +33,12 @@ function App() {
       {/* <Uno/> */}  
        </div>
         <div class="p-6 max-w-sm mx-center bg-pink-600 rounded-xl">
-    <Renderizado/>
+    {/*<Renderizado/>
     < Cup/>
     <Compoenteraiz/>
-   
+   */}  
+        <Llaves/>
+
       </div>
       </div>
     </div>
