@@ -6,8 +6,9 @@
 // import Cup from "./cup/cup";
 // import Compoenteraiz from"./ejemplo1raiz/compoenteraiz";
 // import Llaves from "./Usodellaves/Llaves";
-import Error from "./Error/Error";
-
+//import Error from "./Error/Error";
+//import Imagenapersona from "./Extraccion/imagenapersona";
+import Exprellaves from "./expresionllaves/exprellave";
 function App() {
   return (
     <div className="bg-rose-200 ">
@@ -38,8 +39,11 @@ function App() {
     < Cup/>
     <Compoenteraiz/>
     <Llaves/>
-   */} 
     <Error/>
+        <Imagenapersona/>
+   */} 
+     <Exprellaves/>
+
 
       </div>
       </div>
