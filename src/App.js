@@ -1,11 +1,12 @@
-import { Gallery } from "./components/gallery/gallery";
-import Uno from "./ejercicios/uno";
-import List from "./toolist/list";
-import Registros from "./registro/registros";
-import Renderizado from"./renderizado/renderizado";
-import Cup from "./cup/cup";
-import Compoenteraiz from"./ejemplo1raiz/compoenteraiz";
-import Llaves from "./Usodellaves/Llaves";
+// import { Gallery } from "./components/gallery/gallery";
+// import Uno from "./ejercicios/uno";
+// import List from "./toolist/list";
+// import Registros from "./registro/registros";
+// import Renderizado from"./renderizado/renderizado";
+// import Cup from "./cup/cup";
+// import Compoenteraiz from"./ejemplo1raiz/compoenteraiz";
+// import Llaves from "./Usodellaves/Llaves";
+import Error from "./Error/Error";
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
     {/*<Renderizado/>
     < Cup/>
     <Compoenteraiz/>
-   */}  
-        <Llaves/>
+    <Llaves/>
+   */} 
+    <Error/>
 
       </div>
       </div>
