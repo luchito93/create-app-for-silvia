@@ -1,3 +1,4 @@
+
 // import { Gallery } from "./components/gallery/gallery";
 // import Uno from "./ejercicios/uno";
 // import List from "./toolist/list";
@@ -8,7 +9,9 @@
 // import Llaves from "./Usodellaves/Llaves";
 //import Error from "./Error/Error";
 //import Imagenapersona from "./Extraccion/imagenapersona";
-import Exprellaves from "./expresionllaves/exprellave";
+//import Exprellaves from "./expresionllaves/exprellave";
+//import Funcion from "./funcion/funcion";
+import Imagen from "./imagen/imagen";
 function App() {
   return (
     <div className="bg-rose-200 ">
@@ -41,8 +44,11 @@ function App() {
     <Llaves/>
     <Error/>
         <Imagenapersona/>
+        <Exprellaves/>
+         <Funcion/>
+     
    */} 
-     <Exprellaves/>
+   <Imagen/>
 
 
       </div>
