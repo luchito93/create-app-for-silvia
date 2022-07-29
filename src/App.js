@@ -11,7 +11,9 @@
 //import Imagenapersona from "./Extraccion/imagenapersona";
 //import Exprellaves from "./expresionllaves/exprellave";
 //import Funcion from "./funcion/funcion";
-import Imagen from "./imagen/imagen";
+//import Imagen from "./imagen/imagen";
+//import Tamaños from "./tamaños/tamaños";
+import Cards from "./card/Cards";
 function App() {
   return (
     <div className="bg-rose-200 ">
@@ -46,10 +48,12 @@ function App() {
         <Imagenapersona/>
         <Exprellaves/>
          <Funcion/>
+         <Imagen/>
+            
+     <Tamaños/>
      
    */} 
-   <Imagen/>
-
+    <Cards/>
 
       </div>
       </div>
