@@ -1,44 +1,32 @@
 import { useState } from 'react';
 
-let nextId = 0;
 
-
-function Tabla({mipropiedad}) {
-
-
-
+function Tabla({ mipropiedad }) {
 
   return (
-    <div class="container sm-auto px-100 pt-6 rounded-sm ">
-      <table class="border-collapse border border-slate-500  px-2">
+    <div className="container sm-auto px-100 pt-10 rounded-sm ">
+      <table className="border-collapse border border-slate-500  px-2">
         <thead>
           <tr className=' pr-28'>
-            <th class="border border-slate-600  border-collapse">#</th>
-            <th class="border border-slate-600 border-collapse  px-2">Atomo</th>
-            <th class="border border-slate-600  border-collapse px-2">Masa molecular MM</th>
-            <th class="border border-slate-600  border-collapse px-2">Masa Subtotal</th>
-            <th class="border border-slate-600  border-collapse px-2">Masa Subtotal</th>
+            <th className="border border-slate-600  border-collapse">#</th>
+            <th className="border border-slate-600 border-collapse  px-2">Atomo</th>
+            <th className="border border-slate-600  border-collapse px-2">Masa molecular MM</th>
+            <th className="border border-slate-600  border-collapse px-2">% de masa molecular </th>
+            <th className="border border-slate-600  border-collapse px-2">Masa Subtotal</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="border border-slate-700  px-2">2</td>
-            <td class="border border-slate-700  px-2">dee</td>
-            <td class="border border-slate-700  px-2">fg</td>
-            <td class="border border-slate-700  px-2">ceed</td>
-            <td class="border border-slate-700  px-2">fg</td>
-          </tr>
-        {mipropiedad.map(fila => {
-          return(
-            <tr>
-            <td class="border border-slate-700  px-2">{fila.Number}</td>
-            <td class="border border-slate-700  px-2">{fila.atomo}</td>
-            <td class="border border-slate-700  px-2">{fila.masamolecular}</td>
-            <td class="border border-slate-700  px-2">{fila.masatotal}</td>
-            <td class="border border-slate-700  px-2">{fila.masasubtotal}</td>
-          </tr>
-          )
-        })}
+          {mipropiedad.map((fila, key) => {
+            return (
+              <tr key={key}>
+                <td className="border border-slate-700  px-2">{fila.Number}</td>
+                <td className="border border-slate-700  px-2">{fila.atomo}</td>
+                <td className="border border-slate-700  px-2">{fila.masamolecular}</td>
+                <td className="border border-slate-700  px-2">{fila.masatotal}</td>
+                <td className="border border-slate-700  px-2">{fila.masasubtotal}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
@@ -46,60 +34,138 @@ function Tabla({mipropiedad}) {
 }
 
 
-
-
-
-
-export default function List( ) {
+export default function List() {
   const [name, setName] = useState('');
+  const [input, setInput] = useState([{ id: Date.now, letra: '', numero: 1 }]);
+
+  const [formula, setFormula] = useState([]);
 
 
-  const [formula, setFormula] = useState([{
-    Number: 1, atomo: "Co", masamolecular: 2, masatotal: 23, masasubtotal: 25
-  }, {
-    Number: 1, atomo: "Co", masamolecular: 2, masatotal: 23, masasubtotal: 25
-  }, {
-    Number: 1, atomo: "Co", masamolecular: 2, masatotal: 23, masasubtotal: 25
-  }]);
- 
+  function handleClick() {
+    setName('')
+    setFormula(stated => {
+      return [
+        ...stated, {
+          id: Date.now(),
+          letra: '',
+          numero: 1,
+          Number: 1,
+          atomo: name,
+          masamolecular: 2,
+          masatotal: 23,
+          masasubtotal: 25
+        }]
+    })
+  }
 
-  
-  function handleClick(){
+  function handleinputClick() {
+    setInput(valor => {
+      return [
+        ...valor, {
+          id: Date.now(),
+          letra: '',
+          numero: 1
+        }]
+    })
+  }
 
-     setFormula(stated => {
-              return [
-                ...stated, {
-                Number: 1, atomo: name, masamolecular: 2, masatotal: 23, masasubtotal: 25
-              }]
-            })
-             }
 
+  function handleDeleteTask() {
+    setInput([{
+      id: Date.now(),
+      letra: '',
+      numero: 1
+    }]);
+  }
 
-  
 
   return (
     <>
-      <div class="container sm-auto px-1">
+      <div className="container ">
         <h1 className='font-sans text-lg  pt-3' >Calculadora de Peso Molecular</h1>
         <p className='pt-9'>   Calculadora de Peso Molecular
           Esta calculadora en línea se puede utilizar para calcular el peso molecular medio (MW) de las moléculas introduciendo las fórmulas químicas (por ejemplo, C3H4OH(COOH)3). O puede elegir por una de las siguientes dos listas de opciones, que contienen una serie de compuestos orgánicos comunes (incluida su fórmula química) y todos los elementos. La calculadora de masa molecular reconocerá las fórmulas ingresadas, que están incluidas en la lista de compuestos orgánicos.
           La calculadora maneja como máximo dos niveles de soporte diferentes. Asegúrese de ingresar la molécula de cristalización al final (por ejemplo, C2HCl3O.H2O</p>
-        <div class="grid grid-cols-3 gap-1 mt-3  pt-6">
+        <div className="flex pl-4 pt-4">
 
-          <div className='font-serif text-lg'>FORMULA QUIMICA </div>
+          <div className='font-serif text-lg mr-4'>FORMULA QUIMICA </div>
 
-          <div ><input className='rounded-md focus-visible:outline-none' value={name}
-            onChange={e => setName(e.target.value)}></input></div>
+          <div const inputt className='flex  '> {input.map((valores) => {
+            return (
+              <div key={valores.id} className="flex pl-4 pt-4 mr-1 ">
+                <div >
+                  <input value={valores.letra}
+                    onInput={(e) => {
+                      const modificado = input.map((ob) => {
+                        if (ob.id === valores.id) {
+                          ob.letra = e.target.value
+                        }
+                        return ob
+                      })
+                      setInput(modificado)
+                    }
+                    }
+                    className='rounded-md focus-visible:outline-none w-8 ' />
+                </div>
 
-          <div ><button className='mt-1 ml-1 bg-sky-800 rounded-md px-3 hover:bg-sky-400' onClick={handleClick}
-          >Calcular</button></div>
+                <div >
+                  <input value={valores.numero}
+                    onInput={(e) => {
+                      const modificado = input.map((ob) => {
+                        if (ob.id === valores.id) {
+                          ob.numero = e.target.value
+                        }
+                        return ob
+                      })
+                      setInput(modificado)
+                    }
+                    }
+                    className='rounded-md focus-visible:outline-none w-4 relative top-5  font-mono'>
+                  </input>
+                </div>
+              </div>
+            );
+          })
+          }
+
+          </div>
+
+          <div >
+            <button
+              className=' bg-sky-600 rounded-lg  px-3 hover:bg-sky-400 w-8  mr-4 '
+              onClick={handleinputClick}
+            >+
+            </button>
+          </div>
+
+          <div >
+            <button
+              className='mt-1 ml-1 bg-sky-600 rounded-lg  px-3 hover:bg-sky-400 w-20 mr-4 '
+              onClick={handleClick}
+            >Calcular</button>
+          </div>
+
+          <div >
+            <button
+              className='mt-1 ml-1 bg-sky-600 rounded-lg  px-3 hover:bg-sky-400 w-20 mr-4 '
+              onClick={handleDeleteTask}
+            >eliminar</button>
+          </div>
+        </div>
+
+      </div>
+
+      <Tabla mipropiedad={formula} />
+
+      <div className="flex pl-4 pt-4">
+
+        <div className='font-serif text-lg mr-60'>Total de Masa Molecular </div>
+        <div >
+          <input className='rounded-md focus-visible:outline-none w-28   relative'
+            value={name}
+            onChange={e => setName(e.target.value)}></input>
         </div>
       </div>
-      
-      <Tabla mipropiedad={formula}/>
     </>
-
-
-
   );
 }

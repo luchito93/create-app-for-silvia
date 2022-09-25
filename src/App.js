@@ -15,7 +15,7 @@ function App() {
             rel="noopener noreferrer"
           >
           </a>
-        </header><div class="container mx-auto bg-center">
+        </header><div className="container mx-auto bg-center">
        </div>
         <div >
 
